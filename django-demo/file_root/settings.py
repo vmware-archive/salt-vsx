@@ -15,12 +15,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': '{{ pillar_root["dbengine"] }}',
-        'NAME': '{{ pillar_root["dbname"] }}',
-        'USER': '{{ pillar_root["dbuser"] }}',
-        'PASSWORD': '{{ pillar_root["dbpassword"] }}',
-        'HOST': '{{ pillar_root["dbhost"] }}',
-        'PORT': '{{ pillar_root["dbport"] }}',
+        'ENGINE': '{{ pillar["dbengine"] }}',
+        'NAME': '{{ pillar["dbname"] }}',
+        'USER': '{{ pillar["dbuser"] }}',
+        'PASSWORD': '{{ pillar["dbpassword"] }}',
+        'HOST': '{{ pillar["dbhost"] }}',
+        'PORT': '{{ pillar["dbport"] }}',
     }
 }
 
