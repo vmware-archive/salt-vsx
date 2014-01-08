@@ -37,10 +37,11 @@ django-project-init:
     - cwd: /var/www
     - watch:
       - pkg: Django14
+django-project-syncdb:
   cmd.wait:
     - name: /var/www/myapp/manage.py syncdb
     - watch:
-      - file: django-app
+      - file: django-app-models
 
 settings:
   file.managed:
@@ -48,11 +49,12 @@ settings:
     - source: salt://django-demo/settings.py
     - template: jinja
 
-django-app:
+django-app-views:
   file.managed:
     - name: /var/www/myapp/views.py
     - source: salt://django-demo/app/views.py
 
+django-app-models:
   file.managed:
     - name: /var/www/myapp/models.py
     - source: salt://django-demo/app/models.py
