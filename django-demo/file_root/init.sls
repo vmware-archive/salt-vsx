@@ -49,6 +49,11 @@ settings:
     - source: salt://django-demo/settings.py
     - template: jinja
 
+django-app-urls:
+  file.managed:
+    - name: /var/www/myapp/myapp/urls.py
+    - source: salt://django-demo/app/urls.py
+
 django-app-views:
   file.managed:
     - name: /var/www/myapp/myapp/views.py
