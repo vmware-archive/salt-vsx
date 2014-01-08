@@ -51,12 +51,12 @@ settings:
 
 django-app-views:
   file.managed:
-    - name: /var/www/myapp/views.py
+    - name: /var/www/myapp/myapp/views.py
     - source: salt://django-demo/app/views.py
 
 django-app-models:
   file.managed:
-    - name: /var/www/myapp/models.py
+    - name: /var/www/myapp/myapp/models.py
     - source: salt://django-demo/app/models.py
 
 django-server:
