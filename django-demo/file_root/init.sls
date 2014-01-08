@@ -45,7 +45,7 @@ django-project-syncdb:
 
 settings:
   file.managed:
-    - name: /var/www/myapp/settings.py
+    - name: /var/www/myapp/myapp/settings.py
     - source: salt://django-demo/settings.py
     - template: jinja
 

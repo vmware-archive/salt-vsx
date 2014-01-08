@@ -14,3 +14,6 @@ mysql-server:
     - password: {{ pillar['mysql_password'] }}
     - require:
       - pkg: mysql-server
+
+{{ pillar['mysql_db'] }}:
+  mysql_database.present
