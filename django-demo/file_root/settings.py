@@ -116,7 +116,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'gunicorn',
-    'myapp',
+    '{{ pillar["django_app"] }}',
+
 )
 
 ## Registration Settings
