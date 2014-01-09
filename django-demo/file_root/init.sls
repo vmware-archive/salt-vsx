@@ -37,11 +37,6 @@ django-project-init:
     - cwd: /var/www
     - watch:
       - pkg: Django14
-django-project-syncdb:
-  cmd.wait:
-    - name: /var/www/myapp/manage.py syncdb
-    - watch:
-      - file: django-app-models
 
 settings:
   file.managed:
@@ -63,6 +58,12 @@ django-app-models:
   file.managed:
     - name: /var/www/myapp/myapp/models.py
     - source: salt://django-demo/app/models.py
+
+django-project-syncdb:
+  cmd.wait:
+    - name: /var/www/myapp/manage.py syncdb
+    - watch:
+      - file: django-app-models
 
 django-server:
   cmd.wait:
