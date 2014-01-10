@@ -1,9 +1,7 @@
 django-project-init:
-  cmd.wait:
+  cmd.run:
     - name: /usr/bin/django-admin startproject myapp
     - cwd: /var/www
-    - watch:
-      - pkg: Django14
 
 settings:
   file.managed:
