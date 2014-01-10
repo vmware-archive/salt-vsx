@@ -8,7 +8,7 @@ mysql-server:
     - watch:
       - pkg: mysql-server
 
-{% for remote_host in pillar['remote_host_array'] %}
+{% for remote_host in pillar['mysql_remote_host'] %}
 {{ remote_host }}:
   mysql_user.present:
     - name: {{ pillar['mysql_user'] }}
