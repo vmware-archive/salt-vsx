@@ -8,12 +8,15 @@ mysql-server:
     - watch:
       - pkg: mysql-server
 
-{{ pillar['mysql_user'] }}:
+{% for remote_host in pillar['remote_host_array'] %}
+{{ remote_host }}:
   mysql_user.present:
-    - host: {{ pillar['mysql_remote_host'] }}
+    - name: {{ pillar['mysql_user'] }}
+    - host: {{ remote_host }}
     - password: {{ pillar['mysql_password'] }}
     - require:
       - pkg: mysql-server
+{% endfor %}
 
 {{ pillar['mysql_db'] }}:
   mysql_database.present
