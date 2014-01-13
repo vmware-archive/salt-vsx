@@ -1,0 +1,14 @@
+Overview
+This application serves as a demonstration of how one might configure a web application with VMware Application Director and Salt Stack's remote execution and configuration management engine.
+Note:This is a demonstration application only. It is not intended for production use!
+
+
+Components
+This solution provisions and configures at least one application server and one database server. The application server(s) run a combination of nginx as a front-end webserver and gunicorn as the Django application server. The database server runs MySQL. Both servers run CentOS 6.x.
+
+
+Configuration Strategy
+The generalized approach is to bootstrap the servers with Salt using the Salt Bootstrap project. After this, the requisite files and Salt configuration files for the Django demo are checkout out of a git repo. Application Director then lays down a pillar configuration with configuration values specific to that particular deployment. Finally, Salt runs and configures the system.
+
+
+

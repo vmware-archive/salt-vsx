@@ -1,0 +1,14 @@
+There was an error importing the blueprint.
+
+Please make sure you are using the correct version of application director.
+To troubleshoot issues during import you can try to manually download the blueprint and import using the Application Director CLI.
+For more information on how to use the Application Director CLI refer to the Application Director documentation (https://www.vmware.com/support/pubs/appdirector-pubs.html).
+
+An error occurred when this page attempted to import the solution. This may have been caused by common issues such as:
+
+* using an incorrect URL. You must have your vCloud Application Director installed then a typical URL will look similar to http://<AppDir Host>:8080
+* using an unsupported web browser. Only Chrome and Firefox have the required features for this page to work. If these browsers are not available, you can always manually import the solution. See the end of this message for more information.
+* network access issues. This page needs to be able to access the public internet and also access the vCloud Application Director host.
+* browser security settings. This page uses javascript heavily and will not work without it.
+
+To manually import the solution, click on the "Download File" button, and save the solution XML. Use the vCloud Application Director darwin-cli.jar to import the solution XML with the "import-package" command. See the vCloud Application Director (https://www.vmware.com/support/pubs/appdirector-pubs.html) user guide for more help.
