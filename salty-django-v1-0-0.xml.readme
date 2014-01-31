@@ -1,5 +1,5 @@
 Overview
-This application serves as a demonstration of how one might configure a web application with VMware Application Director and Salt Stack's remote execution and configuration management engine.
+This application serves as a demonstration of how one might configure a web application with VMware vCloud Application Director and Salt Stack's remote execution and configuration management engine.
 Note:This is a demonstration application only. It is not intended for production use!
 
 
