@@ -5,20 +5,25 @@
         },
         "applications": {
             "applicationDirectorWebImport": {
-                "exportFileName": "salty-django-v1-0-0.xml",
+                "exportFileName": "salty-django-v1-0-0-61.xml",
                 "exportedFileReadme": "salty-django-v1-0-0.xml.readme",
                 "importSectionHeader": "Salty Django (Blueprint)",
-                "exportedWithAppDVersion": 6.0,
+                "exportedWithAppDVersion": 6.1,
                 "optional": {
                     "nextStepsMarkdownFile":"salty-django-v1-0-0.xml.md",
-		    "enableConsoleLogging": true,
+		     "enableConsoleLogging": true,
                     "exportedFileErrorReadme": "salty-django-v1-0-0.xml.error.readme",
-                    "headerBulletPoints":[
-                        {"msg":  "A blueprint is a visual model for deployment topology. This page has an import utility that allows you to automatically render the selected application blueprint into <a href='https://www.vmware.com/products/vcloud-application-director.html'>vCloud Application Director</a> 6.0."},
-                        {"msg": "Your Application Director instance needs to be network accessible for the import utility to work"},
-                        {"msg": "You need to have Catalog Admin and Application Architect roles to use import the blueprint into your instance of Application Director"},
-                        {"msg": "If you do not have an instance of Application Director, contact us at <a href='mailto:app-mgmt-partner-support@vmware.com'>Marketplace Support</a>"}
-                    ]
+                    "appdVersions": [{
+                        "name": "6.0",
+                        "version": "6.0",
+                        "exportFileName": "salty-django-v1-0-0-60.xml",
+                        "nextStepsMarkdownFile": "salty-django-v1-0-0.xml.md"
+                    }, {
+                        "name": "6.1",
+                        "version": "6.1",
+                        "exportFileName": "salty-django-v1-0-0-61.xml",
+                        "nextStepsMarkdownFile": "salty-django-v1-0-0.xml.md"
+                    }]
                 }
             }
         }
